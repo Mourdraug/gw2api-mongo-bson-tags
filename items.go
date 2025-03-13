@@ -2,7 +2,7 @@ package gw2api
 
 // Item is a game item
 type Item struct {
-	ID           int      `json:"id"`
+	ID           int      `json:"id" bson:"_id"`
 	ChatLink     string   `json:"chat_link"`
 	Name         string   `json:"name"`
 	Icon         string   `json:"icon"`

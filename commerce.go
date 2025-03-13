@@ -64,8 +64,8 @@ func (s *Session) CommerceListingsIds() (ids []int, err error) {
 
 // CommercePrice contains the currently highest buy price and lowest sell price
 type CommercePrice struct {
-	ID          int  `json:"id"`          // The item id
-	Whitelisted bool `json:"whitelisted"` // Whether free to play accounts may purchase/sell this item
+	ID          int  `json:"id" bson:"item_id"` // The item id
+	Whitelisted bool `json:"whitelisted"`       // Whether free to play accounts may purchase/sell this item
 	Buys        struct {
 		Quantity  int `json:"quantity"`
 		UnitPrice int `json:"unit_price"`
